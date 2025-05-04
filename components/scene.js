@@ -33,11 +33,15 @@ export default function Scene() {
 
         {/* Sky gradient for depth */}
         {/* Removed procedural Sky to keep solid blue background */}
+        <mesh position={[0, 0.03, 49]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[200, 100]} />
+        <meshStandardMaterial color="#228B22" /> {/* forest green */}
+        </mesh>
 
         {/* Soft white clouds */}
-        <Cloud position={[-20, 20, -50]} opacity={0.6} speed={0.2} width={40} depth={1} segments={20} />
-        <Cloud position={[10, 25, -30]} opacity={0.6} speed={0.15} width={30} depth={1} segments={20} />
-        <Cloud position={[0, 18, -70]} opacity={0.6} speed={0.1} width={50} depth={1} segments={20} />
+        <Cloud position={[-40, 20, -120]} opacity={0.6} speed={0.9} width={40} depth={1} segments={20} />
+        <Cloud position={[60, 25, -140]} opacity={0.6} speed={0.8} width={30} depth={1} segments={20} />
+        <Cloud position={[0, 18, -150]} opacity={0.6} speed={0.7} width={50} depth={1} segments={20} />
 
         {/* Lighting */}
         <ambientLight intensity={0.5} />
